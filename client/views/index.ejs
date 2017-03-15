@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Other Otters</title>
+  </head>
+  <body>
+    <h1>Otter Fam!</h1>
+    <a href='/otters/new'>Create an Otter</a>
+    <% for (otter in otters) { %>
+      <p>Name: <a href='/otters/<%= otters[otter]._id %>'><%= otters[otter].name %></a>
+      Age: <%= otters[otter].age %>
+      <a href="/otters/<%= otters[otter]._id %>/edit">Edit the Otter</a>
+      <form action='/otters/<%= otters[otter]._id %>/destroy' method='post'>
+        <input type="submit" value="Ki..Knock Out the Otter">
+      </form>
+      </p>
+
+    <% } %>
+
+
+
+  </body>
+</html>

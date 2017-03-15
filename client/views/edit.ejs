@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Otter Time</title>
+  </head>
+  <body>
+    <h1>Fix <%= otter.name %>!</h1>
+    <form action='/otters/<%= otter.id %>/edit' method='post'>
+      Name: <input type='text' name='name' value='<%= otter.name %>'>
+      Age: <input type='number' name='age' value='<%= otter.age %>'>
+      <input type="submit" value="Edit the Damn Otter">
+    </form>
+    <a href='/'>Home Page for the Otter Fam</a>
+
+  </body>
+</html>
